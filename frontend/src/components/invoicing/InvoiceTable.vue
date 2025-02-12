@@ -728,21 +728,7 @@
           :openDialog="openOrderDetailDialog"
         />
       </Dialog>
-      <Dialog
-        v-model:visible="state.createOrderDialog"
-        dismissableMask
-        closeOnEscape
-        :breakpoints="{
-          '2000px': '55vw',
-          '1400px': '65vw',
-          '1200px': '75vw',
-          '992px': '85vw',
-          '600px': '100vw',
-          '480px': '100vw',
-          '320px': '100vw'
-        }"
-        :modal="true"
-      >
+      <UCDialog :isVisible="state.updateOrderDialog">
         <template #header>
           <div class="flex items-stretch">
             <div class="flex">
@@ -750,8 +736,10 @@
             </div>
           </div>
         </template>
-        <create-invoice :stepsEnabled="false"></create-invoice>
-      </Dialog>
+        <template #content>
+          <create-invoice :stepsEnabled="false"></create-invoice>
+        </template>
+      </UCDialog>
       <Dialog
         v-model:visible="state.containerReleaseInfoDialog"
         closeOnEscape
@@ -836,6 +824,7 @@
   import CreateInvoice from "./create/CreateInvoice.vue"
   import NoteDetail from "../notes/NoteDetail.vue"
   import SearchFilterTable from "./SearchFilterTable.vue"
+  import UCDialog from "@/components/inventory/UCDialog.vue"
 
   import { useAuth0 } from "@auth0/auth0-vue"
 

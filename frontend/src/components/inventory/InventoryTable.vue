@@ -244,26 +244,14 @@
       <CustomerOrderDetail :customerOrderProp="state.customerOrder" />
     </Dialog>
 
-    <Dialog
-      v-model:visible="state.noteDialog"
-      dismissableMask
-      closeOnEscape
-      :breakpoints="{
-        '2000px': '45vw',
-        '1400px': '55vw',
-        '1200px': '65vw',
-        '992px': '75vw',
-        '600px': '100vw',
-        '480px': '100vw',
-        '320px': '100vw'
-      }"
-      :modal="true"
-    >
-      <NoteDetail
-        :inventory="state.crtInventory"
-        @noteSubmitted="onNoteSubmitted"
-      />
-    </Dialog>
+    <UCDialog v-model:visible="state.noteDialog" :modal="true">
+      <template #content>
+        <NoteDetail
+          :inventory="state.crtInventory"
+          @noteSubmitted="onNoteSubmitted"
+        />
+      </template>
+    </UCDialog>
   </div>
 </template>
 
@@ -282,6 +270,7 @@
 
   import LoadingTable from "../loadingTable/LoadingTable.vue"
   import NoteDetail from "../notes/NoteDetail.vue"
+  import UCDialog from "@/components/inventory/UCDialog.vue"
 
   import { useAuth0 } from "@auth0/auth0-vue"
   import cloneDeep from "lodash.clonedeep"
