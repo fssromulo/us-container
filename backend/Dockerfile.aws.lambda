@@ -1,0 +1,16 @@
+FROM public.ecr.aws/lambda/python:3.9
+
+ENV PYTHONUNBUFFERED 1
+EXPOSE 5000
+
+ENV PIP_DISABLE_PIP_VERSION_CHECK=on
+RUN pip install poetry
+
+COPY ./poetry.lock ./poetry.lock
+COPY ./pyproject.toml ./pyproject.toml
+
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-interaction --without dev --no-root
+
+COPY ./src/ ./src
+

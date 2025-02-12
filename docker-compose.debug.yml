@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  redis-server:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  backend:
+    build: ./backend
+    environment:
+      - SECRET_KEY=09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7
+      - APP_MESSAGE=Hello debugger
+      - DB_HOST=db
+    volumes:
+      - ./backend:/app
+    command:
+      [
+        "sh",
+        "-c",
+        "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 -m uvicorn src.main:app --reload --host 0.0.0.0 --port 5000",
+      ]
+    ports:
+      - 5001:5000
+      - 5678:5678
+    depends_on:
+      - db
+
+  db:
+    image: postgres:alpine
+    ports:
+      - "6543:5432"
+    environment:
+      - POSTGRES_USER=hello_fastapi
+      - POSTGRES_PASSWORD=hello_fastapi
+      - POSTGRES_DB=containerCrm

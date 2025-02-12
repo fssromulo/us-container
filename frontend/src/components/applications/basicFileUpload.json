@@ -1,0 +1,21 @@
+[
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-span-4 p-4"
+    },
+    "children": [
+      {
+        "$formkit": "file",
+        "class": "",
+        "accept": "image/*",
+        "name": "cc_front",
+        "label": "Upload photo",
+        "attrs": {
+          "id": "file_input",
+          "class": "block w-full text-sm text-gray-900 border border-gray-300 rounded-lg cursor-pointer bg-gray-50 hover:bg-gray-100 focus:outline-none"
+        }
+      }
+    ]
+  }
+]

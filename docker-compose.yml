@@ -1,0 +1,30 @@
+services:
+  redis-server:
+    image: redis:alpine
+    ports:
+      - "6379:6379"
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - 5001:5000
+    environment:
+      - DB_HOST=db
+      - STAGE=dev
+    volumes:
+      - ./backend:/app
+    command: uvicorn src.main:app --reload --host 0.0.0.0 --port 5000 --reload-include "*.py"
+    depends_on:
+      - db
+      - redis-server
+
+  db:
+    image: postgres:alpine
+    ports:
+      - "6543:5432"
+    environment:
+      - POSTGRES_USER=hello_fastapi
+      - POSTGRES_PASSWORD=hello_fastapi
+      - POSTGRES_DB=containerCrm

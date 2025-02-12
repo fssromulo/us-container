@@ -1,0 +1,1215 @@
+[
+  {
+    "$el": "h2",
+    "attrs": {
+      "class": "text-2xl font-bold text-center col-12 mt-3"
+    },
+    "children": ["Application"]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "first_name",
+        "label": "First Name",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "last_name",
+        "label": "Last Name",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12 text-center"
+    },
+    "children": [
+      {
+        "$el": "h4",
+        "class": "w-full",
+        "children": ["Billing Address (Must match credit card)"]
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "primeInputText",
+        "class": "w-full",
+        "id": "billing_street_address",
+        "name": "billing_street_address",
+        "label": "Street Address",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-2"
+    },
+    "children": [
+      {
+        "$formkit": "primeInputText",
+        "class": "w-full",
+        "id": "billing_city",
+        "name": "billing_city",
+        "label": "City",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-1"
+    },
+    "children": [
+      {
+        "$formkit": "primeDropdown",
+        "class": "w-full",
+        "id": "billing_state",
+        "name": "billing_state",
+        "label": "State",
+        "validation": "required",
+        "placeholder": "Select A State",
+        "options": [
+          {
+            "label": "Alabama",
+            "value": "AL"
+          },
+          {
+            "label": "Alaska",
+            "value": "AK"
+          },
+          {
+            "label": "Arizona",
+            "value": "AZ"
+          },
+          {
+            "label": "Arkansas",
+            "value": "AR"
+          },
+          {
+            "label": "California",
+            "value": "CA"
+          },
+          {
+            "label": "Colorado",
+            "value": "CO"
+          },
+          {
+            "label": "Connecticut",
+            "value": "CT"
+          },
+          {
+            "label": "Delaware",
+            "value": "DE"
+          },
+          {
+            "label": "District Of Columbia",
+            "value": "DC"
+          },
+          {
+            "label": "Florida",
+            "value": "FL"
+          },
+          {
+            "label": "Georgia",
+            "value": "GA"
+          },
+          {
+            "label": "Hawaii",
+            "value": "HI"
+          },
+          {
+            "label": "Idaho",
+            "value": "ID"
+          },
+          {
+            "label": "Illinois",
+            "value": "IL"
+          },
+          {
+            "label": "Indiana",
+            "value": "IN"
+          },
+          {
+            "label": "Iowa",
+            "value": "IA"
+          },
+          {
+            "label": "Kansas",
+            "value": "KS"
+          },
+          {
+            "label": "Kentucky",
+            "value": "KY"
+          },
+          {
+            "label": "Louisiana",
+            "value": "LA"
+          },
+          {
+            "label": "Maine",
+            "value": "ME"
+          },
+          {
+            "label": "Maryland",
+            "value": "MD"
+          },
+          {
+            "label": "Massachusetts",
+            "value": "MA"
+          },
+          {
+            "label": "Michigan",
+            "value": "MI"
+          },
+          {
+            "label": "Minnesota",
+            "value": "MN"
+          },
+          {
+            "label": "Mississippi",
+            "value": "MS"
+          },
+          {
+            "label": "Missouri",
+            "value": "MO"
+          },
+          {
+            "label": "Montana",
+            "value": "MT"
+          },
+          {
+            "label": "Nebraska",
+            "value": "NE"
+          },
+          {
+            "label": "Nevada",
+            "value": "NV"
+          },
+          {
+            "label": "New Hampshire",
+            "value": "NH"
+          },
+          {
+            "label": "New Jersey",
+            "value": "NJ"
+          },
+          {
+            "label": "New Mexico",
+            "value": "NM"
+          },
+          {
+            "label": "New York",
+            "value": "NY"
+          },
+          {
+            "label": "North Carolina",
+            "value": "NC"
+          },
+          {
+            "label": "North Dakota",
+            "value": "ND"
+          },
+          {
+            "label": "Ohio",
+            "value": "OH"
+          },
+          {
+            "label": "Oklahoma",
+            "value": "OK"
+          },
+          {
+            "label": "Oregon",
+            "value": "OR"
+          },
+          {
+            "label": "Pennsylvania",
+            "value": "PA"
+          },
+          {
+            "label": "Rhode Island",
+            "value": "RI"
+          },
+          {
+            "label": "South Carolina",
+            "value": "SC"
+          },
+          {
+            "label": "South Dakota",
+            "value": "SD"
+          },
+          {
+            "label": "Tennessee",
+            "value": "TN"
+          },
+          {
+            "label": "Texas",
+            "value": "TX",
+            "selected": true
+          },
+          {
+            "label": "Utah",
+            "value": "UT"
+          },
+          {
+            "label": "Vermont",
+            "value": "VT"
+          },
+          {
+            "label": "Virginia",
+            "value": "VA"
+          },
+          {
+            "label": "Washington",
+            "value": "WA"
+          },
+          {
+            "label": "West Virginia",
+            "value": "WV"
+          },
+          {
+            "label": "Wisconsin",
+            "value": "WI"
+          },
+          {
+            "label": "Wyoming",
+            "value": "WY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-2"
+    },
+    "children": [
+      {
+        "$formkit": "primeInputText",
+        "class": "w-full",
+        "id": "billing_zip",
+        "name": "billing_zip",
+        "label": "Zip",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12 text-center"
+    },
+    "children": [
+      {
+        "$el": "h4",
+        "class": "w-full",
+        "children": ["Location of container"]
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12 text-center"
+    },
+    "children": [
+      {
+        "id": "same_as_billing",
+        "$formkit": "primeCheckbox",
+        "class": "w-full",
+        "name": "same_as_billing",
+        "label": "Same as Billing",
+        "validation": "none"
+      }
+    ]
+  },
+  {
+    "$cmp": "FormKit",
+    "if": "$get(same_as_billing).value == true",
+    "props": {
+      "type": "primeInputText",
+      "value": "$get(billing_street_address).value",
+      "label": "Street address",
+      "name": "mailing_street_address",
+      "id": "mailing_street_address",
+      "style": "width: 450px;margin-right:20px"
+    }
+  },
+  {
+    "$el": "div",
+    "if": "$get(same_as_billing).value == false",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "primeInputText",
+        "class": "w-full",
+        "name": "mailing_street_address",
+        "label": "Street Address",
+        "placeholder": "",
+        "validation": "required"
+      }
+    ]
+  },
+
+  {
+    "$cmp": "FormKit",
+    "if": "$get(same_as_billing).value == true",
+    "props": {
+      "type": "primeInputText",
+      "value": "$get(billing_city).value",
+      "label": "City",
+      "name": "mailing_city",
+      "id": "mailing_city",
+      "style": "margin-right:20px"
+    }
+  },
+  {
+    "$el": "div",
+    "if": "$get(same_as_billing).value == false",
+    "attrs": {
+      "class": "col-2"
+    },
+    "children": [
+      {
+        "$formkit": "primeInputText",
+        "class": "w-full",
+        "name": "mailing_city",
+        "label": "City",
+        "required": true,
+        "placeholder": "",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "if": "$get(same_as_billing).value == false",
+    "attrs": {
+      "class": "col-1"
+    },
+    "children": [
+      {
+        "$formkit": "primeDropdown",
+        "class": "w-full",
+        "name": "mailing_state",
+        "label": "State",
+        "validation": "required",
+        "placeholder": "Select A State",
+        "options": [
+          {
+            "label": "Alabama",
+            "value": "AL"
+          },
+          {
+            "label": "Alaska",
+            "value": "AK"
+          },
+          {
+            "label": "Arizona",
+            "value": "AZ"
+          },
+          {
+            "label": "Arkansas",
+            "value": "AR"
+          },
+          {
+            "label": "California",
+            "value": "CA"
+          },
+          {
+            "label": "Colorado",
+            "value": "CO"
+          },
+          {
+            "label": "Connecticut",
+            "value": "CT"
+          },
+          {
+            "label": "Delaware",
+            "value": "DE"
+          },
+          {
+            "label": "District Of Columbia",
+            "value": "DC"
+          },
+          {
+            "label": "Florida",
+            "value": "FL"
+          },
+          {
+            "label": "Georgia",
+            "value": "GA"
+          },
+          {
+            "label": "Hawaii",
+            "value": "HI"
+          },
+          {
+            "label": "Idaho",
+            "value": "ID"
+          },
+          {
+            "label": "Illinois",
+            "value": "IL"
+          },
+          {
+            "label": "Indiana",
+            "value": "IN"
+          },
+          {
+            "label": "Iowa",
+            "value": "IA"
+          },
+          {
+            "label": "Kansas",
+            "value": "KS"
+          },
+          {
+            "label": "Kentucky",
+            "value": "KY"
+          },
+          {
+            "label": "Louisiana",
+            "value": "LA"
+          },
+          {
+            "label": "Maine",
+            "value": "ME"
+          },
+          {
+            "label": "Maryland",
+            "value": "MD"
+          },
+          {
+            "label": "Massachusetts",
+            "value": "MA"
+          },
+          {
+            "label": "Michigan",
+            "value": "MI"
+          },
+          {
+            "label": "Minnesota",
+            "value": "MN"
+          },
+          {
+            "label": "Mississippi",
+            "value": "MS"
+          },
+          {
+            "label": "Missouri",
+            "value": "MO"
+          },
+          {
+            "label": "Montana",
+            "value": "MT"
+          },
+          {
+            "label": "Nebraska",
+            "value": "NE"
+          },
+          {
+            "label": "Nevada",
+            "value": "NV"
+          },
+          {
+            "label": "New Hampshire",
+            "value": "NH"
+          },
+          {
+            "label": "New Jersey",
+            "value": "NJ"
+          },
+          {
+            "label": "New Mexico",
+            "value": "NM"
+          },
+          {
+            "label": "New York",
+            "value": "NY"
+          },
+          {
+            "label": "North Carolina",
+            "value": "NC"
+          },
+          {
+            "label": "North Dakota",
+            "value": "ND"
+          },
+          {
+            "label": "Ohio",
+            "value": "OH"
+          },
+          {
+            "label": "Oklahoma",
+            "value": "OK"
+          },
+          {
+            "label": "Oregon",
+            "value": "OR"
+          },
+          {
+            "label": "Pennsylvania",
+            "value": "PA"
+          },
+          {
+            "label": "Rhode Island",
+            "value": "RI"
+          },
+          {
+            "label": "South Carolina",
+            "value": "SC"
+          },
+          {
+            "label": "South Dakota",
+            "value": "SD"
+          },
+          {
+            "label": "Tennessee",
+            "value": "TN"
+          },
+          {
+            "label": "Texas",
+            "value": "TX",
+            "selected": true
+          },
+          {
+            "label": "Utah",
+            "value": "UT"
+          },
+          {
+            "label": "Vermont",
+            "value": "VT"
+          },
+          {
+            "label": "Virginia",
+            "value": "VA"
+          },
+          {
+            "label": "Washington",
+            "value": "WA"
+          },
+          {
+            "label": "West Virginia",
+            "value": "WV"
+          },
+          {
+            "label": "Wisconsin",
+            "value": "WI"
+          },
+          {
+            "label": "Wyoming",
+            "value": "WY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "$cmp": "FormKit",
+    "if": "$get(same_as_billing).value == true && $get(billing_state).value != ''",
+    "props": {
+      "type": "primeDropdown",
+      "value": "$get(billing_state).value",
+      "label": "State",
+      "id": "mailing_state",
+      "name": "mailing_state",
+      "style": "margin-right:20px",
+      "options": [
+        {
+          "label": "Alabama",
+          "value": "AL"
+        },
+        {
+          "label": "Alaska",
+          "value": "AK"
+        },
+        {
+          "label": "Arizona",
+          "value": "AZ"
+        },
+        {
+          "label": "Arkansas",
+          "value": "AR"
+        },
+        {
+          "label": "California",
+          "value": "CA"
+        },
+        {
+          "label": "Colorado",
+          "value": "CO"
+        },
+        {
+          "label": "Connecticut",
+          "value": "CT"
+        },
+        {
+          "label": "Delaware",
+          "value": "DE"
+        },
+        {
+          "label": "District Of Columbia",
+          "value": "DC"
+        },
+        {
+          "label": "Florida",
+          "value": "FL"
+        },
+        {
+          "label": "Georgia",
+          "value": "GA"
+        },
+        {
+          "label": "Hawaii",
+          "value": "HI"
+        },
+        {
+          "label": "Idaho",
+          "value": "ID"
+        },
+        {
+          "label": "Illinois",
+          "value": "IL"
+        },
+        {
+          "label": "Indiana",
+          "value": "IN"
+        },
+        {
+          "label": "Iowa",
+          "value": "IA"
+        },
+        {
+          "label": "Kansas",
+          "value": "KS"
+        },
+        {
+          "label": "Kentucky",
+          "value": "KY"
+        },
+        {
+          "label": "Louisiana",
+          "value": "LA"
+        },
+        {
+          "label": "Maine",
+          "value": "ME"
+        },
+        {
+          "label": "Maryland",
+          "value": "MD"
+        },
+        {
+          "label": "Massachusetts",
+          "value": "MA"
+        },
+        {
+          "label": "Michigan",
+          "value": "MI"
+        },
+        {
+          "label": "Minnesota",
+          "value": "MN"
+        },
+        {
+          "label": "Mississippi",
+          "value": "MS"
+        },
+        {
+          "label": "Missouri",
+          "value": "MO"
+        },
+        {
+          "label": "Montana",
+          "value": "MT"
+        },
+        {
+          "label": "Nebraska",
+          "value": "NE"
+        },
+        {
+          "label": "Nevada",
+          "value": "NV"
+        },
+        {
+          "label": "New Hampshire",
+          "value": "NH"
+        },
+        {
+          "label": "New Jersey",
+          "value": "NJ"
+        },
+        {
+          "label": "New Mexico",
+          "value": "NM"
+        },
+        {
+          "label": "New York",
+          "value": "NY"
+        },
+        {
+          "label": "North Carolina",
+          "value": "NC"
+        },
+        {
+          "label": "North Dakota",
+          "value": "ND"
+        },
+        {
+          "label": "Ohio",
+          "value": "OH"
+        },
+        {
+          "label": "Oklahoma",
+          "value": "OK"
+        },
+        {
+          "label": "Oregon",
+          "value": "OR"
+        },
+        {
+          "label": "Pennsylvania",
+          "value": "PA"
+        },
+        {
+          "label": "Rhode Island",
+          "value": "RI"
+        },
+        {
+          "label": "South Carolina",
+          "value": "SC"
+        },
+        {
+          "label": "South Dakota",
+          "value": "SD"
+        },
+        {
+          "label": "Tennessee",
+          "value": "TN"
+        },
+        {
+          "label": "Texas",
+          "value": "TX",
+          "selected": true
+        },
+        {
+          "label": "Utah",
+          "value": "UT"
+        },
+        {
+          "label": "Vermont",
+          "value": "VT"
+        },
+        {
+          "label": "Virginia",
+          "value": "VA"
+        },
+        {
+          "label": "Washington",
+          "value": "WA"
+        },
+        {
+          "label": "West Virginia",
+          "value": "WV"
+        },
+        {
+          "label": "Wisconsin",
+          "value": "WI"
+        },
+        {
+          "label": "Wyoming",
+          "value": "WY"
+        }
+      ]
+    }
+  },
+  {
+    "$cmp": "FormKit",
+    "if": "$get(same_as_billing).value == true && $get(billing_state).value === ''",
+    "props": {
+      "type": "primeDropdown",
+      "value": "TX",
+      "label": "State",
+      "id": "mailing_state",
+      "name": "mailing_state",
+      "style": "margin-right:20px",
+      "options": [
+        {
+          "label": "Alabama",
+          "value": "AL"
+        },
+        {
+          "label": "Alaska",
+          "value": "AK"
+        },
+        {
+          "label": "Arizona",
+          "value": "AZ"
+        },
+        {
+          "label": "Arkansas",
+          "value": "AR"
+        },
+        {
+          "label": "California",
+          "value": "CA"
+        },
+        {
+          "label": "Colorado",
+          "value": "CO"
+        },
+        {
+          "label": "Connecticut",
+          "value": "CT"
+        },
+        {
+          "label": "Delaware",
+          "value": "DE"
+        },
+        {
+          "label": "District Of Columbia",
+          "value": "DC"
+        },
+        {
+          "label": "Florida",
+          "value": "FL"
+        },
+        {
+          "label": "Georgia",
+          "value": "GA"
+        },
+        {
+          "label": "Hawaii",
+          "value": "HI"
+        },
+        {
+          "label": "Idaho",
+          "value": "ID"
+        },
+        {
+          "label": "Illinois",
+          "value": "IL"
+        },
+        {
+          "label": "Indiana",
+          "value": "IN"
+        },
+        {
+          "label": "Iowa",
+          "value": "IA"
+        },
+        {
+          "label": "Kansas",
+          "value": "KS"
+        },
+        {
+          "label": "Kentucky",
+          "value": "KY"
+        },
+        {
+          "label": "Louisiana",
+          "value": "LA"
+        },
+        {
+          "label": "Maine",
+          "value": "ME"
+        },
+        {
+          "label": "Maryland",
+          "value": "MD"
+        },
+        {
+          "label": "Massachusetts",
+          "value": "MA"
+        },
+        {
+          "label": "Michigan",
+          "value": "MI"
+        },
+        {
+          "label": "Minnesota",
+          "value": "MN"
+        },
+        {
+          "label": "Mississippi",
+          "value": "MS"
+        },
+        {
+          "label": "Missouri",
+          "value": "MO"
+        },
+        {
+          "label": "Montana",
+          "value": "MT"
+        },
+        {
+          "label": "Nebraska",
+          "value": "NE"
+        },
+        {
+          "label": "Nevada",
+          "value": "NV"
+        },
+        {
+          "label": "New Hampshire",
+          "value": "NH"
+        },
+        {
+          "label": "New Jersey",
+          "value": "NJ"
+        },
+        {
+          "label": "New Mexico",
+          "value": "NM"
+        },
+        {
+          "label": "New York",
+          "value": "NY"
+        },
+        {
+          "label": "North Carolina",
+          "value": "NC"
+        },
+        {
+          "label": "North Dakota",
+          "value": "ND"
+        },
+        {
+          "label": "Ohio",
+          "value": "OH"
+        },
+        {
+          "label": "Oklahoma",
+          "value": "OK"
+        },
+        {
+          "label": "Oregon",
+          "value": "OR"
+        },
+        {
+          "label": "Pennsylvania",
+          "value": "PA"
+        },
+        {
+          "label": "Rhode Island",
+          "value": "RI"
+        },
+        {
+          "label": "South Carolina",
+          "value": "SC"
+        },
+        {
+          "label": "South Dakota",
+          "value": "SD"
+        },
+        {
+          "label": "Tennessee",
+          "value": "TN"
+        },
+        {
+          "label": "Texas",
+          "value": "TX",
+          "selected": true
+        },
+        {
+          "label": "Utah",
+          "value": "UT"
+        },
+        {
+          "label": "Vermont",
+          "value": "VT"
+        },
+        {
+          "label": "Virginia",
+          "value": "VA"
+        },
+        {
+          "label": "Washington",
+          "value": "WA"
+        },
+        {
+          "label": "West Virginia",
+          "value": "WV"
+        },
+        {
+          "label": "Wisconsin",
+          "value": "WI"
+        },
+        {
+          "label": "Wyoming",
+          "value": "WY"
+        }
+      ]
+    }
+  },
+  {
+    "$el": "div",
+    "if": "$get(same_as_billing).value == false",
+    "attrs": {
+      "class": "col-2"
+    },
+    "children": [
+      {
+        "$formkit": "primeInputText",
+        "class": "w-full",
+        "name": "mailing_zip",
+        "label": "Zip",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$cmp": "FormKit",
+    "if": "$get(same_as_billing).value == true",
+    "props": {
+      "type": "primeInputText",
+      "value": "$get(billing_zip).value",
+      "label": "Zip",
+      "class": "w-full",
+      "name": "zip",
+      "id": "zip"
+    }
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12 text-center"
+    },
+    "children": [
+      {
+        "$el": "h4",
+        "class": "w-full",
+        "children": ["Logistics"]
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "primeInputMask",
+        "class": "w-full",
+        "name": "phone_number",
+        "label": "Phone Number",
+        "mask": "(999) 999-9999",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-6"
+    },
+    "children": [
+      {
+        "$formkit": "primeDropdown",
+        "class": "w-full",
+        "name": "door_orientation",
+        "label": "Door Direction",
+        "placeholder": "Select Door Direction",
+        "options": [
+          {
+            "label": "Facing Cab",
+            "value": "Facing Cab"
+          },
+          {
+            "label": "Opposite of Cab",
+            "value": "Opposite of Cab"
+          }
+        ],
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "file",
+        "class": "file",
+        "accept": "image/*",
+        "name": "dl_front",
+        "id": "dl_front",
+        "label": "Drivers License",
+        "validation": "required",
+        "children": [
+          {
+            "$el": "input",
+            "attrs": {
+              "class": "p-button p-button-rounded p-button-success p-button-lg"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "file",
+        "class": "w-full file",
+        "accept": "image/*",
+        "name": "cc_front",
+        "label": "Credit Card Front",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "file",
+        "class": "w-full file",
+        "accept": "image/*",
+        "name": "cc_back",
+        "label": "Credit Card Back",
+        "validation": "required"
+      }
+    ]
+  }
+]

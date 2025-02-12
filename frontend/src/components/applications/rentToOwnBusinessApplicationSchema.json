@@ -1,0 +1,421 @@
+[
+  {
+    "$el": "h2",
+    "attrs": {
+      "class": "text-2xl font-bold text-center col-12 mt-3"
+    },
+    "children": ["USA Containers Rent To Own Business Application"]
+  },
+  {
+    "$el": "h4",
+    "attrs": {
+      "class": "text-xl font-bold text-center col-12 mt-3"
+    },
+    "children": [
+      "Please make sure you add all required files and documentation to this application."
+    ]
+  },
+  {
+    "$el": "h4",
+    "attrs": {
+      "class": "text-xl font-bold text-center col-12 mt-3"
+    },
+    "children": [
+      "By not adding all required files and documentation it will drastically slow down the process for approval."
+    ]
+  },
+  {
+    "$el": "h4",
+    "attrs": {
+      "class": "text-xl font-bold text-center col-12 mt-3"
+    },
+    "children": [
+      "www.ContainerCosts.com / www.USAContainers.co / 1-800-304-0981 / rentals@usacontainers.co"
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "company_name",
+        "label": "Company Name",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "company_ein",
+        "label": "Company EIN",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "primeDropdown",
+        "class": "w-full",
+        "id": "company_legal_form",
+        "name": "company_legal_form",
+        "label": "Company Legal Form",
+        "validation": "required",
+        "placeholder": "Limited Liability Company",
+        "options": [
+          {
+            "label": "Limited Liability Company",
+            "value": "Limited Liability Company"
+          },
+          {
+            "label": "Individual (Sole Member)",
+            "value": "Individual (Sole Member)"
+          },
+          {
+            "label": "Partnership",
+            "value": "Partnership"
+          },
+          {
+            "label": "Other",
+            "value": "Other"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "if": "$get(company_legal_form).value == 'Other'",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "other_company_legal_form",
+        "label": "Other Company Legal Form",
+        "validation": {
+          "if": "$get(company_legal_form).value == 'Other'",
+          "then": "required",
+          "else": ""
+        }
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "company_hq_address",
+        "label": "Company HQ Address (Street, City, State, Zip Code)",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "company_phone",
+        "label": "Company HQ Phone Number",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bank_reference",
+        "label": "Bank Reference - Name of Company's Bank",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bank_reference_name",
+        "label": "Bank Reference - Name of Company's Bank",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bank_reference_representative",
+        "label": "Bank Reference - Name of Company's Bank Representative",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bank_reference_representative_phone",
+        "label": "Bank Reference - Phone Number of Company's Bank Representative",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bank_reference_representative_email",
+        "label": "Bank Reference - Email of Company's Bank Representative",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bank_reference_bank_address",
+        "label": "Bank Reference - Company's Bank Address (Street, City, State, Zip Code)",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bank_reference_company_account_number",
+        "label": "Bank Reference - Company's Bank Account Number",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bussiness_reference_1",
+        "label": "Business Reference #1 - Please fill out their name, address and phone number",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bussiness_reference_2",
+        "label": "Business Reference #2 - Please fill out their name, address and phone number",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "bussiness_reference_3",
+        "label": "Business Reference #3 - Please fill out their name, address and phone number",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "company_annual_revenue",
+        "label": "Company Annual Revenue",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "company_repsentative",
+        "label": "Company Representative (Full Name of the person applying)",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "company_repsentative_phone",
+        "label": "Company Representative Phone Number (Phone Number of the person applying)",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "down_payment",
+        "label": "Down Payment [do you intend to put anything down? this would lower your monthly payment] - please enter the amount below. If you don't intend to put anything down, just type \"None\"",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-8"
+    },
+    "children": []
+  },
+
+  {
+    "$cmp": "LabelFileLinkComp",
+    "props": {
+      "class": "col-4",
+      "label1": "Upload Company Business License",
+      "label2": "",
+      "link": "",
+      "label3": "",
+      "name": "company_business_license"
+    },
+    "children": []
+  },
+
+  {
+    "$cmp": "LabelFileLinkComp",
+    "props": {
+      "class": "col-4",
+      "label1": "Upload Company Bank Statements (Last 3 Months) - OR - Last Year Tax Returns",
+      "label2": "",
+      "link": "",
+      "label3": "",
+      "name": "company_bank_statements"
+    },
+    "children": []
+  },
+
+  {
+    "$cmp": "LabelFileLinkComp",
+    "props": {
+      "class": "col-4",
+      "label1": "Upload credit application. (credit application can be found",
+      "label2": "here",
+      "link": "https://drive.google.com/file/d/19p7t1zMUnre-AiDwCj8646VNdVhE1QWQ/view",
+      "label3": ")",
+      "name": "credit_application"
+    },
+    "children": []
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "notes",
+        "label": "Notes - is there anything we should know or be aware of?"
+      }
+    ]
+  }
+]

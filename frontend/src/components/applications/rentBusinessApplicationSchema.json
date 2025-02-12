@@ -1,0 +1,568 @@
+[
+  {
+    "$el": "h2",
+    "attrs": {
+      "class": "text-2xl font-bold text-center col-12 mt-3"
+    },
+    "children": ["USA Containers | Corporate Lease"]
+  },
+  {
+    "$el": "h4",
+    "attrs": {
+      "class": "text-xl font-bold text-center col-12 mt-3"
+    },
+    "children": [
+      "Before you apply, please make sure you have received a full quote from your sales rep. If you haven't received a full quote, please email the size that you want and your zip code to rentals@usacontainers.co to get one."
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "company_name",
+        "class": "w-full",
+        "label": "Company Name",
+        "$formkit": "primeInputText",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "company_representative",
+        "class": "w-full",
+        "label": "Company Representative [Full Name]",
+        "$formkit": "primeInputText",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "company_email",
+        "class": "w-full",
+        "label": "Company Public Email",
+        "$formkit": "primeInputText",
+        "validation": "required|email",
+        "validation-visibility": "live"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "email",
+        "class": "w-full",
+        "label": "Your Email",
+        "$formkit": "primeInputText",
+        "validation": "required|email",
+        "validation-visibility": "live"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "company_phone",
+        "class": "w-full",
+        "label": "Company Public Phone Number",
+        "$formkit": "primeInputText",
+        "placeholder": "999-999-9999",
+        "validation": "required|matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/",
+        "validation-visibility": "live"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "phone",
+        "class": "w-full",
+        "label": "Your Phone Number",
+        "$formkit": "primeInputText",
+        "placeholder": "999-999-9999",
+        "validation": "required|matches:/^[0-9]{3}-[0-9]{3}-[0-9]{4}$/",
+        "validation-visibility": "live"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-8"
+    },
+    "children": [
+      {
+        "name": "billing_address",
+        "class": "w-full",
+        "label": "Billing Street Address",
+        "$formkit": "primeInputText",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "billing_city",
+        "class": "w-full",
+        "label": "Billing City",
+        "$formkit": "primeInputText",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "primeDropdown",
+        "class": "w-full",
+        "id": "billing_state",
+        "name": "billing_state",
+        "label": "State",
+        "validation": "required",
+        "placeholder": "Select A State",
+        "options": [
+          {
+            "label": "Alabama",
+            "value": "AL"
+          },
+          {
+            "label": "Alaska",
+            "value": "AK"
+          },
+          {
+            "label": "Arizona",
+            "value": "AZ"
+          },
+          {
+            "label": "Arkansas",
+            "value": "AR"
+          },
+          {
+            "label": "California",
+            "value": "CA"
+          },
+          {
+            "label": "Colorado",
+            "value": "CO"
+          },
+          {
+            "label": "Connecticut",
+            "value": "CT"
+          },
+          {
+            "label": "Delaware",
+            "value": "DE"
+          },
+          {
+            "label": "District Of Columbia",
+            "value": "DC"
+          },
+          {
+            "label": "Florida",
+            "value": "FL"
+          },
+          {
+            "label": "Georgia",
+            "value": "GA"
+          },
+          {
+            "label": "Hawaii",
+            "value": "HI"
+          },
+          {
+            "label": "Idaho",
+            "value": "ID"
+          },
+          {
+            "label": "Illinois",
+            "value": "IL"
+          },
+          {
+            "label": "Indiana",
+            "value": "IN"
+          },
+          {
+            "label": "Iowa",
+            "value": "IA"
+          },
+          {
+            "label": "Kansas",
+            "value": "KS"
+          },
+          {
+            "label": "Kentucky",
+            "value": "KY"
+          },
+          {
+            "label": "Louisiana",
+            "value": "LA"
+          },
+          {
+            "label": "Maine",
+            "value": "ME"
+          },
+          {
+            "label": "Maryland",
+            "value": "MD"
+          },
+          {
+            "label": "Massachusetts",
+            "value": "MA"
+          },
+          {
+            "label": "Michigan",
+            "value": "MI"
+          },
+          {
+            "label": "Minnesota",
+            "value": "MN"
+          },
+          {
+            "label": "Mississippi",
+            "value": "MS"
+          },
+          {
+            "label": "Missouri",
+            "value": "MO"
+          },
+          {
+            "label": "Montana",
+            "value": "MT"
+          },
+          {
+            "label": "Nebraska",
+            "value": "NE"
+          },
+          {
+            "label": "Nevada",
+            "value": "NV"
+          },
+          {
+            "label": "New Hampshire",
+            "value": "NH"
+          },
+          {
+            "label": "New Jersey",
+            "value": "NJ"
+          },
+          {
+            "label": "New Mexico",
+            "value": "NM"
+          },
+          {
+            "label": "New York",
+            "value": "NY"
+          },
+          {
+            "label": "North Carolina",
+            "value": "NC"
+          },
+          {
+            "label": "North Dakota",
+            "value": "ND"
+          },
+          {
+            "label": "Ohio",
+            "value": "OH"
+          },
+          {
+            "label": "Oklahoma",
+            "value": "OK"
+          },
+          {
+            "label": "Oregon",
+            "value": "OR"
+          },
+          {
+            "label": "Pennsylvania",
+            "value": "PA"
+          },
+          {
+            "label": "Rhode Island",
+            "value": "RI"
+          },
+          {
+            "label": "South Carolina",
+            "value": "SC"
+          },
+          {
+            "label": "South Dakota",
+            "value": "SD"
+          },
+          {
+            "label": "Tennessee",
+            "value": "TN"
+          },
+          {
+            "label": "Texas",
+            "value": "TX",
+            "selected": true
+          },
+          {
+            "label": "Utah",
+            "value": "UT"
+          },
+          {
+            "label": "Vermont",
+            "value": "VT"
+          },
+          {
+            "label": "Virginia",
+            "value": "VA"
+          },
+          {
+            "label": "Washington",
+            "value": "WA"
+          },
+          {
+            "label": "West Virginia",
+            "value": "WV"
+          },
+          {
+            "label": "Wisconsin",
+            "value": "WI"
+          },
+          {
+            "label": "Wyoming",
+            "value": "WY"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "billing_zipcode",
+        "class": "w-full",
+        "label": "Zip Code",
+        "$formkit": "primeInputText",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "id": "container_size",
+        "name": "container_size",
+        "class": "w-full",
+        "label": "Container Size",
+        "options": [
+          {
+            "label": "20' Shipping Container",
+            "value": "20' Shipping Container"
+          },
+          {
+            "label": "40' Shipping Container",
+            "value": "40' Shipping Container"
+          }
+        ],
+        "$formkit": "primeDropdown",
+        "validation": "required",
+        "placeholder": "Limited Liability Company"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-8"
+    },
+    "children": [
+      {
+        "name": "delivery_address",
+        "class": "w-full",
+        "label": "Please type the full delivery address",
+        "$formkit": "primeInputText",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "id": "quantity",
+        "name": "quantity",
+        "class": "w-full",
+        "label": "Quantity",
+        "options": [
+          {
+            "label": "1",
+            "value": "1"
+          },
+          {
+            "label": "2",
+            "value": "2"
+          },
+          {
+            "label": "Other",
+            "value": "Other"
+          }
+        ],
+        "$formkit": "primeDropdown",
+        "validation": "required",
+        "placeholder": "1"
+      }
+    ]
+  },
+  {
+    "if": "$get(quantity).value == 'Other'",
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "other_quantity",
+        "class": "w-full",
+        "label": "Other Quantity",
+        "$formkit": "primeInputText",
+        "validation": {
+          "if": "$get(quantity).value == 'Other'",
+          "else": "",
+          "then": "required"
+        }
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "id": "contract_length",
+        "name": "contract_length",
+        "class": "w-full",
+        "label": "Contract Length",
+        "options": [
+          {
+            "label": "Month To Month",
+            "value": "Month To Month"
+          },
+          {
+            "label": "Other",
+            "value": "Other"
+          }
+        ],
+        "$formkit": "primeDropdown",
+        "validation": "required",
+        "placeholder": "Month To Month"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-8"
+    },
+    "children": []
+  },
+  {
+    "if": "$get(contract_length).value == 'Other'",
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "name": "other_contract_length",
+        "class": "w-full",
+        "label": "Other Contract Length",
+        "$formkit": "primeInputText",
+        "validation": {
+          "if": "$get(contract_length).value == 'Other'",
+          "else": "",
+          "then": "required"
+        }
+      }
+    ]
+  },
+  {
+    "$cmp": "LabelFileLinkComp",
+    "props": {
+      "link": "https://drive.google.com/file/d/19p7t1zMUnre-AiDwCj8646VNdVhE1QWQ/view",
+      "name": "credit_application",
+      "class": "col-4",
+      "label1": "Upload credit application. (credit application can be found",
+      "label2": "here",
+      "label3": "USA Containers Credit Application Form)"
+    },
+    "children": []
+  },
+  {
+    "$cmp": "LabelFileLinkComp",
+    "props": {
+      "link": "",
+      "name": "w9",
+      "class": "col-4",
+      "label1": "Upload W9",
+      "label2": "",
+      "label3": ""
+    },
+    "children": []
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "name": "notes",
+        "class": "w-full",
+        "label": "Notes - is there anything we should know or be aware of?",
+        "$formkit": "primeInputText"
+      }
+    ]
+  }
+]

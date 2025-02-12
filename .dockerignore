@@ -1,0 +1,25 @@
+# Exclude virtual environment
+venv/
+# Exclude cache, logs, and temporary files
+__pycache__/
+*.log
+*.tmp
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.git
+.gitignore
+.serverless
+.vscode
+cdk
+cdk.out
+htmlcov
+migrations
+node_modules
+sql
+import_scripts
+README.md
+# Exclude model training checkpoints and tensorboard logs
+checkpoints/
+runs/

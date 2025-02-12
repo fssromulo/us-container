@@ -1,0 +1,40 @@
+# Pip imports
+from psycopg2 import sql
+
+# Internal imports
+from src.schemas.reports import FilterObject
+
+
+def get_top_10_warehouses_delivery_efficiency(filters: FilterObject, psycopg2_connection=None):
+    query = (
+        sql.SQL(
+            """
+                        SELECT
+                            d.city || ' ' || d.state AS city_loc,
+                            AVG(count_business_days(o.paid_at::DATE, o.delivered_at::DATE)) AS days
+                        FROM
+                            "order" o
+                        INNER JOIN order_address oa ON o.address_id = oa.id
+                        INNER JOIN line_item li on o.id = li.order_id
+                        INNER JOIN container_inventory i on li.inventory_id = i.id
+                        INNER JOIN depot d on i.depot_id=d.id
+                        WHERE
+                            o.created_at BETWEEN  {begin_date}
+                                AND {end_date}
+                            AND o.account_id={account_id}
+                            AND o.delivered_at IS NOT NULL
+                            AND o.paid_at IS NOT NULL AND count_business_days(o.paid_at::DATE, o.delivered_at::DATE) > 0
+                        GROUP BY city_loc
+                        ORDER BY days ASC
+                        LIMIT 10
+                        """
+        )
+        .format(
+            begin_date=sql.Literal(filters.begin_date),
+            end_date=sql.Literal(filters.end_date),
+            account_id=sql.Literal(filters.account_id),
+        )
+        .as_string(psycopg2_connection)
+    )
+
+    return query

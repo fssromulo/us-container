@@ -1,0 +1,126 @@
+[
+  {
+    "$el": "h2",
+    "attrs": {
+      "class": "text-2xl font-bold text-center col-12 mt-3"
+    },
+    "children": ["USA Containers Lease Application"]
+  },
+
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "first_name",
+        "label": "First Name",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "middle_name",
+        "label": "Middle Name"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "last_name",
+        "label": "Last Name",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "email",
+        "label": "Your email",
+        "validation": "required|email"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "phone",
+        "label": "Your Phone Number",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "personal_home_address",
+        "label": "Personal Home Address (Full Address - including street, city, state zip code)",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "primeDropdown",
+        "class": "w-full",
+        "id": "container_size",
+        "name": "container_size",
+        "label": "Container Size",
+        "validation": "required",
+        "placeholder": "Limited Liability Company",
+        "options": [
+          {
+            "label": "20' Shipping Container",
+            "value": "20' Shipping Container"
+          },
+          {
+            "label": "40' Shipping Container",
+            "value": "40' Shipping Container"
+          }
+        ]
+      }
+    ]
+  }
+]

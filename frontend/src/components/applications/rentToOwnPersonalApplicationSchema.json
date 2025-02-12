@@ -1,0 +1,398 @@
+[
+  {
+    "$el": "h2",
+    "attrs": {
+      "class": "text-2xl font-bold text-center col-12 mt-3"
+    },
+    "children": ["USA Containers Rent To Own Application"]
+  },
+  {
+    "$el": "h4",
+    "attrs": {
+      "class": "text-xl font-bold text-center col-12 mt-3"
+    },
+    "children": [
+      "Please make sure you add all required files and documentation to this application."
+    ]
+  },
+  {
+    "$el": "h4",
+    "attrs": {
+      "class": "text-xl font-bold text-center col-12 mt-3"
+    },
+    "children": [
+      "By not adding all required files and documentation it will drastically slow down the process for approval."
+    ]
+  },
+  {
+    "$el": "h4",
+    "attrs": {
+      "class": "text-xl font-bold text-center col-12 mt-3"
+    },
+    "children": [
+      "www.ContainerCosts.com / www.USAContainers.co / 1-800-304-0981 / rentals@usacontainers.co"
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "quote",
+        "label": "Quote",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "first_name",
+        "label": "First Name",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "middle_name",
+        "label": "Middle Name"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "last_name",
+        "label": "Last Name",
+        "validation": "required"
+      }
+    ]
+  },
+
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "Email",
+        "label": "Email",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "phone",
+        "label": "Phone"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": []
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "Street Address",
+        "label": "Street Address",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "City",
+        "label": "City, State, Zip Code",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": []
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "down_payment",
+        "label": "Down Payment [do you intend to put anything down? this would lower your monthly payment] - please enter the amount below. If you don't intend to put anything down, just type \"None\"",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-8"
+    },
+    "children": []
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "$formkit": "primeDropdown",
+        "class": "w-full",
+        "id": "employment_type",
+        "name": "employment_type",
+        "label": "Employment Type",
+        "validation": "required",
+        "placeholder": "W2 (Full Time Employee)",
+        "options": [
+          {
+            "label": "W2 (Full Time Employee)",
+            "value": "W2 (Full Time Employee)"
+          },
+          {
+            "label": "Self Employed",
+            "value": "Self Employed"
+          },
+          {
+            "label": "1099 (W9 - Contractor)",
+            "value": "1099 (W9 - Contractor)"
+          },
+          {
+            "label": "Unemployed",
+            "value": "Unemployed"
+          },
+          {
+            "label": "Other",
+            "value": "Other"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "if": "$get(employment_type).value == 'Other'",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "other_employment_type",
+        "label": "Other employment type",
+        "validation": {
+          "if": "$get(employment_type).value == 'Other'",
+          "then": "required",
+          "else": ""
+        }
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputNumber",
+        "name": "montly_gross_income",
+        "label": "Montly Gross Income",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "employer_name",
+        "label": "Employer Name",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "employer_full_physical_address",
+        "label": "Employer Full Physical Address",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-4"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "employer_full_number",
+        "label": "Employer Full Number",
+        "validation": "required"
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-8"
+    },
+    "children": []
+  },
+
+  {
+    "$cmp": "LabelFileLinkComp",
+    "props": {
+      "class": "col-4",
+      "label1": "Please upload proof of income (The LAST 3 months of PAY STUBS, BANK STATEMENTS or ANY OTHER DOCUMENTS)",
+      "label2": "",
+      "link": "",
+      "label3": "",
+      "name": "proof_of_income"
+    },
+    "children": []
+  },
+
+  {
+    "$cmp": "LabelFileLinkComp",
+    "props": {
+      "class": "col-4",
+      "label1": "Please upload a copy of the front of your driver's license",
+      "label2": "",
+      "link": "",
+      "label3": "",
+      "name": "driver_license_front"
+    },
+    "children": []
+  },
+
+  {
+    "$cmp": "LabelFileLinkComp",
+    "props": {
+      "class": "col-4",
+      "label1": "Please upload a copy of the back of your driver's license",
+      "label2": "",
+      "link": "",
+      "label3": "",
+      "name": "driver_license_back"
+    },
+    "children": []
+  },
+
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "$formkit": "primeDropdown",
+        "class": "w-full",
+        "id": "consent",
+        "name": "consent",
+        "label": "We partner with third party organizations for approval on your application. This authorization is valid for purposes of verifying information given pursuant to employment, leasing, rental, business negotiations, or any other lawful purpose covered under the Fair Credit Reporting Act (FCRA). By choosing \"YES\" and submitting your loan application you consent to USA Containers, Esren Lending and third party organizations performing a one bureau credit check. Your information will not be sold.",
+        "validation": "required",
+        "placeholder": "Yes",
+        "options": [
+          {
+            "label": "Yes",
+            "value": "Yes"
+          },
+          {
+            "label": "No",
+            "value": "No"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "$el": "div",
+    "attrs": {
+      "class": "col-12"
+    },
+    "children": [
+      {
+        "class": "w-full",
+        "$formkit": "primeInputText",
+        "name": "notes",
+        "label": "Notes - is there anything we should know or be aware of?"
+      }
+    ]
+  }
+]

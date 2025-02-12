@@ -1,0 +1,18 @@
+FROM python:3.9-slim
+
+ENV PYTHONUNBUFFERED 1
+ENV STAGE=dev
+ENV PIP_DISABLE_PIP_VERSION_CHECK=on
+EXPOSE 5000
+RUN pip install poetry
+
+WORKDIR /app
+
+COPY poetry.lock pyproject.toml /app/
+
+RUN poetry config virtualenvs.create false
+RUN poetry install --no-interaction --without dev --no-root
+
+COPY src/ ./src
+
+CMD ["uvicorn", "src.main:app", "--log-level", "debug", "--host", "0.0.0.0", "--port", "5000", "--timeout-keep-alive", "120"]

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: .
+      dockerfile: ./tests/containers/Dockerfile
+    ports:
+      - 5001:5000
+    environment:
+      - DB_NAME=containerCrm
+      - DB_PORT=5432
+      - DB_USER=hello_fastapi
+      - DB_PASS=hello_fastapi
+      - DB_HOST=db
+      - BASE_WEB_URL=http://localhost:5173
+      - BASE_AUTH_URL=https://dev-q7gskrpgi0lqzizg.us.auth0.com/api/v2
+      - STAGE=local
+    volumes:
+      - .:/app
+    command: uvicorn src.main:app --reload --host 0.0.0.0 --port 5000
