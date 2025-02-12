@@ -1,5 +1,3 @@
-controllers/quote_searches
-
 # Python imports
 import logging
 import os
