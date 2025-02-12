@@ -1,3 +1,4 @@
+controllers/quote_searches
 
 # Python imports
 import logging
@@ -21,6 +22,7 @@ async def create_quote_searches(quote_searches: QuoteSearchesIn) -> Model:
     return saved_quote_searches
 
 async def get_by_count(date1=None, date2=None, timezone=None, selected_user_id='ALL') -> Any:
+    sql_filter = []
     if not date1 and selected_user_id == 'ALL':
         query = """
             SELECT 
@@ -45,11 +47,12 @@ async def get_by_count(date1=None, date2=None, timezone=None, selected_user_id='
                 quote_searches qs
             INNER JOIN 
                 users usr ON CAST(qs.user_id AS VARCHAR) = CAST(usr.id AS VARCHAR)
-            WHERE qs.created_at >= (TO_TIMESTAMP({date1}) AT TIME ZONE '{timezone}')::DATE AND qs.created_at <= (TO_TIMESTAMP({date2}) AT TIME ZONE '{timezone}')::DATE
+            WHERE qs.created_at >= (TO_TIMESTAMP($1) AT TIME ZONE '$2')::DATE AND qs.created_at <= (TO_TIMESTAMP($3)) AT TIME ZONE '$4')::DATE
             GROUP BY postal_code
             ORDER BY occurrences DESC
             LIMIT 10
             """
+        sql_filter = [date1, timezone, date2, timezone]
     elif not date1 and selected_user_id != 'ALL':
         query = f"""
             SELECT 
@@ -60,11 +63,12 @@ async def get_by_count(date1=None, date2=None, timezone=None, selected_user_id='
                 quote_searches qs
             INNER JOIN 
                 users usr ON CAST(qs.user_id AS VARCHAR) = CAST(usr.id AS VARCHAR)
-            WHERE qs.user_id = '{selected_user_id}'
+            WHERE qs.user_id = '$1'
             GROUP BY postal_code
             ORDER BY occurrences DESC
             LIMIT 10
             """
+        sql_filter = [selected_user_id]
     else:
         query = f"""
             SELECT 
@@ -75,14 +79,15 @@ async def get_by_count(date1=None, date2=None, timezone=None, selected_user_id='
                 quote_searches qs
             INNER JOIN 
                 users usr ON CAST(qs.user_id AS VARCHAR) = CAST(usr.id AS VARCHAR)
-            WHERE qs.created_at >= (TO_TIMESTAMP({date1}) AT TIME ZONE '{timezone}')::DATE AND qs.created_at <= (TO_TIMESTAMP({date2}) AT TIME ZONE '{timezone}')::DATE
-                AND qs.user_id = '{selected_user_id}'
+            WHERE qs.created_at >= (TO_TIMESTAMP($1) AT TIME ZONE '$2')::DATE AND qs.created_at <= (TO_TIMESTAMP($3)) AT TIME ZONE '$4')::DATE
+                AND qs.user_id = '$5'
             GROUP BY postal_code
             ORDER BY occurrences DESC
             LIMIT 10
             """
+        sql_filter =[date1, timezone, date2, timezone, selected_user_id]
 
-    results = await Tortoise.get_connection("default").execute_query(query)
+    results = await Tortoise.get_connection("default").execute_query(query, sql_filter)
     return results
 
 async def get_quote_searches(user: Auth0User, date1=None, date2=None, timezone=None, selected_user_id='ALL') -> Model:
